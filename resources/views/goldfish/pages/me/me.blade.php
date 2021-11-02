@@ -1,25 +1,30 @@
 @extends('layouts.base')
-@section('content')
+
 @section('title', 'Me')
+
+@section('content')
 <div class="container">
-  <div class="row">
-    <div class="col-lg-5">
-      @include('components.me')
-      @include('components.search')
-      @include('components.personalbadges')
-      @include('components.friends')
-    </div>
-    <div class="col-lg-7">
-      @include('components.news')
-      <div class="row">
-        <div class="col-lg-6">
-          @include('components.twitter')
+    <div class="row">
+        <div class="col-lg-5">
+            <x-goldfish.user.me-box :alerts="$alerts"/>
+            <x-goldfish.find-user/>
+            <x-goldfish.user.personal-badges :badges="$badges"/>
+            <x-goldfish.user.personal-friends :online-friends="$onlineFriends"/>
         </div>
-        <div class="col-lg-6">
-          @include('components.discord')
+
+        <div class="col-lg-7">
+            <x-goldfish.news-slider :news="$news"/>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <x-goldfish.twitter-box/>
+                </div>
+
+                <div class="col-lg-6">
+                    <x-goldfish.discord-box/>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 @endsection
