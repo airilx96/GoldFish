@@ -1,16 +1,19 @@
 @extends('layouts.base')
-@section('content')
+
 @section('title', 'Community')
-<div class="container">
-  <div class="row">
-    <div class="col-lg-7">
-      @include('components.community.randomhabbos')
-      @include('components.news')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <x-goldfish.community.random-users :randomUsers="$randomUsers"/>
+                <x-goldfish.news-slider :news="$news"/>
+            </div>
+
+            <div class="col-lg-4">
+                <x-goldfish.discord-box/>
+                <x-goldfish.twitter-box/>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-4">
-      @include('components.discord')
-      @include('components.twitter')
-    </div>
-  </div>
-</div>
 @endsection

@@ -6,12 +6,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
-                @include('components.community.stafflist')
+                <x-goldfish.community.staff-card :ranks="$ranks" :employees="$employees"/>
             </div>
 
             <div class="col-lg-3">
                 <div class="box black">
-                    <div class="heading">About</div>
+                    <div class="heading">{{ __('$employees') }}</div>
                     <div class="content">
                         <small>
                             <p>The {{ CMSHelper::settings('hotelname') }} staff team is one big happy family, each staff

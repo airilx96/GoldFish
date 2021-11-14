@@ -55,8 +55,7 @@ Route::middleware(['installed','changeTheme','maintenance', 'guest'])->group(fun
         return redirect('login');
     })->name('index');
 
-
-
+    // Authentication routes
     Auth::routes();
 
     // Login routes

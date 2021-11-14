@@ -1,3 +1,5 @@
+@props(['ranks' => $ranks, 'employees' => $employees])
+
 @foreach($ranks as $rank)
     <div class="box red">
         <div class="heading">{{$rank->rank_name}}</div>
@@ -23,7 +25,7 @@
                 </div>
             </a>
         @empty
-            <p class="text-center">There is currently no staff at this position</p>
+            <p class="text-center">{{ __('There is currently no staff at this position') }}</p>
         @endforelse
     </div>
 @endforeach

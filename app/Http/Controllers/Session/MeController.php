@@ -15,7 +15,7 @@ class MeController extends Controller
     {
         $badges = User_Badges::query()->where('user_id', auth()->id())->take(32)->get();
         $news = News::query()->orderBy('date', 'DESC')->take(3)->get();
-        $friends = Friendship::query() ->where('user_one_id', auth()->id())->inRandomOrder()->take(5)->get();
+        $friends = Friendship::query()->where('user_one_id', auth()->id())->inRandomOrder()->take(5)->get();
         $friendOnlineCount = Friendship::query()
             ->whereHas('habbo', function ($query) {
                 $query->where('online', '1');
@@ -23,7 +23,6 @@ class MeController extends Controller
             ->where('user_one_id', auth()->id())
             ->get();
         $alerts = Alerts::query()->latest('id')->get();
-
 
         return view('pages.me.me', [
                 'badges' => $badges,

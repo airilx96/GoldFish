@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
   <div class="col-md-7">
-    @include('components.community.articles')
+    @include('components.goldfish.community.articles')
   </div>
   <div class="col-md-5">
     @include('components.constant.discord')

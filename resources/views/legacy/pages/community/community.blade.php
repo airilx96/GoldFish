@@ -8,8 +8,8 @@
   </div>
   <div class="col-md-7">
     @include('components.constant.news')
-    @include('components.community.randomonlinehabbos')
-    @include('components.community.randomhabbos')
+    @include('components.goldfish.community.randomonlinehabbos')
+    @include('components.goldfish.community.randomhabbos')
   </div>
 </div>
 @endsection
