@@ -10,6 +10,7 @@
     @include('components.constant.news')
     @include('components.community.randomonlinehabbos')
     @include('components.community.randomhabbos')
+    <x-legacy.hot-rooms :rooms="$rooms"/>
   </div>
 </div>
 @endsection
