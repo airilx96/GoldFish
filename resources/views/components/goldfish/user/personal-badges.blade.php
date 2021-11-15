@@ -1,4 +1,4 @@
-@props(['badges' => $badges])
+@props(['badges'])
 
 <div class="box badges red">
     <div class="heading">My Badges</div>

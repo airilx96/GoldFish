@@ -1,4 +1,4 @@
-@props(['user' => $user, 'rooms' => $rooms])
+@props(['user', 'rooms'])
 
 <div class="box blue profile rooms">
     <div class="heading">{{ __(':username rooms', ['username' => $user->username]) }}</div>

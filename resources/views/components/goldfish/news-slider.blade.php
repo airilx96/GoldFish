@@ -1,4 +1,4 @@
-@props(['news' => $news])
+@props(['news'])
 
 <div class="{{(CMSHelper::settings('goldfish_cards') == 0 ? 'topStory-box' : 'grid-200')}}">
     @foreach ($news as $article)

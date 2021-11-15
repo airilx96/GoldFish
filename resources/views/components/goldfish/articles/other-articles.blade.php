@@ -1,7 +1,7 @@
-@props(['otherArticles' => $otherArticles])
+@props(['otherArticles'])
 
 <div class="box blue">
-    <div class="heading">Other articles</div>
+    <div class="heading">{{ __('Other articles') }}</div>
     <div class="content">
         <ul>
             @forelse($otherArticles as $article)
@@ -9,7 +9,7 @@
                     <li>{{ $article->caption }}</li>
                 </a>
             @empty
-                <p class="text-center alert alert-dark">There's currently no other articles</p>
+                <p class="text-center alert alert-dark">{{ __('There is currently no other articles') }}</p>
             @endforelse
         </ul>
     </div>

@@ -1,4 +1,4 @@
-@props(['news' => $news])
+@props(['news'])
 
 @foreach ($news as $article)
     <div class="col-sm-12 col-md-4 mb-2">

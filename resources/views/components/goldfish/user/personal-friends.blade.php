@@ -1,4 +1,4 @@
-@props(['friendsOnline' => $onlineFriends])
+@props(['friendsOnline'])
 
 <div class="box blue">
     <div class="heading">My Online Friends</div>

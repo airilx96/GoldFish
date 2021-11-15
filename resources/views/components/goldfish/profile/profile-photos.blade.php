@@ -1,4 +1,4 @@
-@props(['photos' => $photos])
+@props(['photos'])
 
 @if($photos->isEmpty())
     <hr>

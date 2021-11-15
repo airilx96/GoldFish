@@ -1,4 +1,4 @@
-@props(['alerts' => $alerts])
+@props(['alerts'])
 
 <div class="box meview" style="background-image:url('/goldfish/images/me/views/{{ auth()->user()->hotelview }}');">
     <div class="plate">

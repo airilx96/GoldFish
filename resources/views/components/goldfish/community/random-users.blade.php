@@ -1,4 +1,4 @@
-@props(['randomUsers' => $randomUsers])
+@props(['randomUsers'])
 
 <div class="box habbos">
     <div class="heading">{{ __('Random :hotelname', ['hotelname' => CMSHelper::settings('hotelname')]) }}</div>

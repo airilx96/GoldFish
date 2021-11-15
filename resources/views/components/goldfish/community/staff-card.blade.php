@@ -1,4 +1,4 @@
-@props(['ranks' => $ranks, 'employees' => $employees])
+@props(['ranks', 'employees'])
 
 @foreach($ranks as $rank)
     <div class="box red">
